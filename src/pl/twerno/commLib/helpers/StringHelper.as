@@ -8,10 +8,7 @@ package pl.twerno.commLib.helpers {
 		 *  <code>false</code> w przeciwnym przypadku.
 		 */
 		public static function isEmpty(s:String):Boolean {
-			if (s == null || s == '') 
-				return true;
-			else
-				return false;
+			return (s == null || s == '');
 		}
 
 
@@ -27,6 +24,21 @@ package pl.twerno.commLib.helpers {
 				for (var i:int = 0; i < params.length; i++)
 					source = source.replace(new RegExp("\\{"+i+"\\}", "g"), params[i].toString());
 			return source;
+		}
+
+		public static function arrayToStr(array:Array):String {
+			var result:String = '';
+			for (var o:Object in array)
+				if (result == '')
+					result = o.toString()
+				else
+					result += ', ' +o.toString()
+			return '[' +result +']';
+		}
+
+		public static function getErrorMsg(object:Object, msg:String, params:Array = null):String {
+			return '[' +ObjectHelper.getClassName(object) +']' 
+				  +' ' +format(msg, params);
 		}
 	}
 }
