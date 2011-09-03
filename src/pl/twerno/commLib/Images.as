@@ -1,5 +1,11 @@
 package pl.twerno.commLib {
 	public class Images {
+		/**
+		 * Silk Icons
+		 * http://www.famfamfam.com/lab/icons/silk/
+		 * 
+		 * Creative Commons Attribution 2.5 License
+		 */ 
 		
 		[Embed("assets/disk.png")]
 		public const diskImg:Class;
@@ -60,6 +66,27 @@ package pl.twerno.commLib {
 		
 		[Embed("assets/controller.png")]
 		public const controllerImg:Class;
+
+		[Embed("assets/music.png")]
+		public const musicImg:Class;
+		
+		[Embed("assets/star.png")]
+		public const starImg:Class;
+		
+		[Embed("assets/medal_silver_3.png")]
+		public const medal_silverImg:Class;
+		
+		[Embed("assets/medal_bronze_3.png")]
+		public const medal_bronzeImg:Class;
+		
+		[Embed("assets/medal_gold_3.png")]
+		public const medal_goldImg:Class;
+		
+		[Embed("assets/tick.png")]
+		public const tick:Class;
+		
+		[Embed("assets/cross.png")]
+		public const cross:Class;
 		
 		private static var _images : Images;
 		public static function get():Images {
