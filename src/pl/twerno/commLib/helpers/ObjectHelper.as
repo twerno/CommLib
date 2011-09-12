@@ -92,7 +92,9 @@ package pl.twerno.commLib.helpers {
 		public static function collectionToString(collection:Object):String {
 			var result: String = '';
 
-			if (collection is Array)
+			if (collection == null)
+				result += "=null";
+			else if (collection is Array)
 				result += "=[" +(collection as Array).join(', ') +"]";
 			else if (collection is ArrayCollection)
 				result += "=[" +(collection as ArrayCollection).source.join(', ') +"]";

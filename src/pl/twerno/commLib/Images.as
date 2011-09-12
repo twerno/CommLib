@@ -83,10 +83,10 @@ package pl.twerno.commLib {
 		public const medal_goldImg:Class;
 		
 		[Embed("assets/tick.png")]
-		public const tick:Class;
+		public const tickImg:Class;
 		
 		[Embed("assets/cross.png")]
-		public const cross:Class;
+		public const crossImg:Class;
 		
 		private static var _images : Images;
 		public static function get():Images {

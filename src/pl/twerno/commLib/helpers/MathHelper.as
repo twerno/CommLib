@@ -8,7 +8,7 @@ package pl.twerno.commLib.helpers {
 		 *  @return liczba całkowita z przedziału [0..max -1]
 		 */ 
 		public static function nextInt(max:int):int {
-			return Math.random()*max;
+			return Math.floor(Math.random()*max);
 		}
 		
 		/**
